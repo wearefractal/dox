@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Example Project</title>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css" rel="stylesheet">
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 10px;
+        padding-bottom: 40px;
+      }
+
+      .container-fluid > .content {
+          margin-right: 240px;
+      }
+      .sidebar-nav {
+        position: absolute;
+        right: 20px;
+        top: 9px;
+        width: 220px;
+      }
+      hr.soften {
+        height: 1px;
+        margin: 20px 0;
+        background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+        background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+        background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+        background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+        border: 0;
+      }
+    </style>
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
+
+  <body onload="onLoad()" data-spy="scroll">
+    <div class="container-fluid">
+      <div class="row-fluid">
+
+        <div class="span2" id="sidebar">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">example</li>
+               <li><a href="#example-initialize">initialize</a></li>
+               <li><a href="#example-coolprop">coolprop</a></li>
+               <li><a href="#example-kill">kill</a></li>
+               <li><a href="#example-whatever">whatever</a></li>
+              <li class="nav-header">example2</li>
+               <li><a href="#example2-doSomething">doSomething</a></li>
+               <li><a href="#example2-name">name</a></li>
+               <li><a href="#example2-destroy">destroy</a></li>
+               <li><a href="#example2-fool">fool</a></li>
+          </div><!--/.well -->
+        </div><!--/span-->
+
+        <div class="content">
+          <div class="span9">
+            <div class="hero-unit">
+              <h1>Example Project</h1>
+              <p>Chambray lo-fi cosby sweater fixie, seitan tofu lomo put a bird on it organic mcsweeney&#39;s.  Cardigan butcher 3 wolf moon ennui, ethical fanny pack brunch post-ironic gentrify art party lomo.  Odd future thundercats cred pour-over, locavore etsy helvetica gastropub ethnic DIY irony butcher.  Lomo gentrify master cleanse, mcsweeney&#39;s forage pinterest umami jean shorts synth.  Aesthetic whatever direct trade four loko blog messenger bag.  Before they sold out umami kogi, ennui hoodie fap photo booth DIY pour-over lo-fi occupy lomo typewriter wolf.  Mlkshk forage vinyl food truck.</p>
+            </div>
+          </div>
+            <div class="span10" id="example">
+              <h2>example</h2>
+                <div class="span9" id="example-initialize">
+                  <h3>initialize</h3>
+                    <p>This function initializes the library</p>
+                  <pre class="prettyprint">function (wha) {
+    //This line does something nifty
+    console.log(&quot;initialized &quot; + wha);
+}</pre>
+                </div>
+                <div class="span9" id="example-coolprop">
+                  <h3>coolprop</h3>
+                    <p><div class="alert alert-warning">This is super complex - watch out for it!</div></p>
+                  <pre class="prettyprint">&quot;hi&quot;</pre>
+                </div>
+                <div class="span9" id="example-kill">
+                  <h3>kill</h3>
+                    <p>This function kills a process</p>
+                    <p>@param pid {Number} is the process id</p>
+                    <p>@return {void} nothing</p>
+                  <pre class="prettyprint">function (pid) {
+    console.log(&quot;killed &quot; + pid);
+}</pre>
+                </div>
+                <div class="span9" id="example-whatever">
+                  <h3>whatever</h3>
+                    <p>Does nothing but looks neat</p>
+                  <pre class="prettyprint">&quot;fool&quot;</pre>
+                </div>
+              <hr class="span9 soften">
+            </div>
+            <div class="span10" id="example2">
+              <h2>example2</h2>
+                <div class="span9" id="example2-doSomething">
+                  <h3>doSomething</h3>
+                    <p>This function initializes the library</p>
+                  <pre class="prettyprint">function (wha) {
+  //I lied, this does nothing.
+  var useless = require(&#39;useless&#39;);
+  useless.do(&#39;nothing&#39;);
+}</pre>
+                </div>
+                <div class="span9" id="example2-name">
+                  <h3>name</h3>
+                    <p><div class="alert alert-info">This is used internally.</div></p>
+                  <pre class="prettyprint">&quot;examplez&quot;</pre>
+                </div>
+                <div class="span9" id="example2-destroy">
+                  <h3>destroy</h3>
+                    <p>This function kills a process</p>
+                  <pre class="prettyprint">function () {
+    //aint that some shit
+    console.log(&quot;breakin some shit&quot;);
+}</pre>
+                </div>
+                <div class="span9" id="example2-fool">
+                  <h3>fool</h3>
+                    <p>Define who the fool is</p>
+                  <pre class="prettyprint">&quot;toby&quot;</pre>
+                </div>
+              <hr class="span9 soften">
+            </div>
+        </div>
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script>
+      var onLoad = function () {
+        $('#sidebar').scrollspy();
+        var nav = $('.sidebar-nav');
+        //If screen height is large enough, support nav scroll following
+        if (screen.height > nav[0].offsetHeight){
+          nav.css('position', 'fixed');
+        }
+        prettyPrint();
+      };
+    </script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
+  </body>
+</html>

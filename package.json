@@ -1,25 +1,27 @@
 {
-   "name":"APPNAME",
-   "description":"Nothing here yet",
+   "name":"dox",
+   "description":"Documentation",
    "version":"0.0.1",
-   "homepage":"http://github.com/wearefractal/APPNAME",
-   "repository":"git://github.com/wearefractal/APPNAME.git",
+   "homepage":"http://github.com/wearefractal/dox",
+   "repository":"git://github.com/wearefractal/dox.git",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
    "main":"./index.js",
-   
-   "dependencies":{
-      "coffee-script":"*"
+   "preferGlobal":true,
+   "bin":{
+      "dox":"./bin/dox"
    },
-   "devDependencies":{
-      "node-log":"*"
+   "dependencies":{
+      "coffee-script":"*",
+      "burrito":"*",
+      "hogan":"*"
    },
    "engines":{
       "node":">= 0.4.0"
    },
    "licenses":[
       {
-         "type":"MIT",
-         "url":"http://github.com/wearefractal/APPNAME/raw/master/LICENSE"
+          "type":"MIT",
+          "url":"http://github.com/wearefractal/dox/raw/master/LICENSE"
       }
    ]
 }

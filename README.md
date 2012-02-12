@@ -1,12 +1,12 @@
 ## Information
 
 <table>
-<tr> 
-<td>Package</td><td>APPNAME</td>
+<tr>
+<td>Package</td><td>dox</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>NOTHING HERE YET</td>
+<td>Documentation</td>
 </tr>
 <tr>
 <td>Node Version</td>
@@ -22,7 +22,7 @@ NOTHING HERE YET
 
 ## Examples
 
-You can view further examples in the [example folder.](https://github.com/wearefractal/APPNAME/tree/master/examples)
+You can view further examples in the [example folder.](https://github.com/wearefractal/dox/tree/master/examples)
 
 ## LICENSE
 

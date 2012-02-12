@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{options.title}}</title>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css" rel="stylesheet">
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 10px;
+        padding-bottom: 40px;
+      }
+
+      .container-fluid > .content {
+          margin-right: 240px;
+      }
+      .sidebar-nav {
+        position: absolute;
+        right: 20px;
+        top: 9px;
+        width: 220px;
+      }
+      hr.soften {
+        height: 1px;
+        margin: 20px 0;
+        background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+        background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+        background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+        background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+        border: 0;
+      }
+    </style>
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
+
+  <body onload="onLoad()" data-spy="scroll">
+    <div class="container-fluid">
+      <div class="row-fluid">
+
+        <div class="span2" id="sidebar">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+            {{#files}}
+              <li class="nav-header">{{filename}}</li>
+              {{#items}}
+               <li><a href="#{{filename}}-{{name}}">{{name}}</a></li>
+              {{/items}}
+            {{/files}}
+          </div><!--/.well -->
+        </div><!--/span-->
+
+        <div class="content">
+          <div class="span9">
+            <div class="hero-unit">
+              <h1>{{options.title}}</h1>
+              <p>{{options.description}}</p>
+            </div>
+          </div>
+          {{#files}}
+            <div class="span10" id="{{filename}}">
+              <h2>{{filename}}</h2>
+              {{#items}}
+                <div class="span9" id="{{filename}}-{{name}}">
+                  <h3>{{name}}</h3>
+                  {{#comments}}
+                    <p>{{{.}}}</p>
+                  {{/comments}}
+                  <pre class="prettyprint">{{source}}</pre>
+                </div>
+              {{/items}}
+              <hr class="span9 soften">
+            </div>
+          {{/files}}
+        </div>
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script>
+      var onLoad = function () {
+        $('#sidebar').scrollspy();
+        var nav = $('.sidebar-nav');
+        //If screen height is large enough, support nav scroll following
+        if (screen.height > nav[0].offsetHeight){
+          nav.css('position', 'fixed');
+        }
+        prettyPrint();
+      };
+    </script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
+  </body>
+</html>
