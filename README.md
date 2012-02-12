@@ -28,6 +28,8 @@ html = dox.render [somefile, otherfile], {template options}, 'template name'
 
 ## Examples
 
+![Clean Template](http://i.imgur.com/Is02O.png)
+
 You can view further examples in the [example folder.](https://github.com/wearefractal/dox/tree/master/examples)
 
 ## LICENSE
