@@ -6,7 +6,7 @@
 </tr>
 <tr>
 <td>Description</td>
-<td>Documentation</td>
+<td>Modular documentation</td>
 </tr>
 <tr>
 <td>Node Version</td>
@@ -17,7 +17,13 @@
 ## Usage
 
 ```coffee-script
-NOTHING HERE YET
+dox = require 'dox'
+fs = require 'fs'
+
+somefile = dox.process fs.readFileSync 'somefile.js'
+otherfile = dox.process fs.readFileSync 'otherfile.js'
+
+html = dox.render [somefile, otherfile], {template options}, 'template name'
 ```
 
 ## Examples
